@@ -1,0 +1,23 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background-color: #565656;
+
+    font-size: 48px;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text {
+    width: 100%;
+    white-space: pre;
+    transform: translate(-30%, -32px) rotateZ(-6deg);
+    color: #808080;
+    user-select: none;
+}

@@ -1,0 +1,15 @@
+.app_header {
+    height: 56px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.header_element {
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
