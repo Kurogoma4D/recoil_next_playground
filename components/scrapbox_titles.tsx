@@ -2,6 +2,7 @@ import Axios from "axios";
 import { atom, useRecoilState, useRecoilValue } from "recoil";
 import { useEffect } from "react";
 import styles from "../styles/scrapbox_titles.module.css";
+import { loadingState } from "./loading_cover";
 
 const MAX_MAP = 12;
 
@@ -52,6 +53,7 @@ function organizeTitles(base: string[]): string[] {
 function ScrapboxTitles() {
     const titles = useRecoilValue(scrapboxTitles);
     const [_, setData] = useRecoilState(scrapboxTitles);
+    const [isLoaded, setLoadingState] = useRecoilState(loadingState);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -61,6 +63,7 @@ function ScrapboxTitles() {
             const mappedTitles = data.pages.map((e) => e.title);
 
             setData(organizeTitles(mappedTitles));
+            setLoadingState(true);
         };
         fetchData();
     }, []);
