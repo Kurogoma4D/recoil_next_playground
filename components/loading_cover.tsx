@@ -17,9 +17,7 @@ export const LoadingCover = () => {
             <style jsx>{`
                 .loading_cover {
                     background-color: #00796b;
-                     {
-                        /* opacity: ${isLoaded ? "0" : "1"}; */
-                    }
+                    opacity: ${isLoaded ? "0" : "1"};
                     width: 100%;
                     position: absolute;
                     top: 0;
